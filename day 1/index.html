@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #winner{
+          height: 30px;
+          width: 200px;
+          padding: 10px;
+          color: black;
+          background-color:white;
+          font-size: 20px;
+       }
+    </style>
+</head>
+<body>
+    <div id="winner">Show which dice winner</div>
+    <div id="member-1">dice-1</div>
+    <div id="member-2">dice-2</div>
+    <div id="member-3">dice-3</div>
+    <button id="roll" onclick="showDice()">ROLL THE DICE</button>
+</body>
+</html>
+<script>
+     function showDice(){
+         var d1= Math.floor(Math.random()*6)+1;
+         var d2= Math.floor(Math.random()*6)+1;
+         var d3= Math.floor(Math.random()*6)+1;
+
+      if(d1>d2 && d1>d3){
+         s= document.querySelector("#winner");
+         s.innerText="dice-1 winner";
+         s.style.color="white";
+         s.style.backgroundColor="green";
+      }
+     else if(d2>d1 && d2>d3){
+         s= document.querySelector("#winner");
+         s.innerText="dice-2 winner";
+         s.style.color="white";
+         s.style.backgroundColor="green";
+      }
+      
+     else if(d3>d1 && d3>d2){
+         s= document.querySelector("#winner");
+         s.innerText="dice-3 winner";
+         s.style.color="white";
+         s.style.backgroundColor="green";
+      }
+       
+      document.querySelector("#member-1").innerText=d1;
+      document.querySelector("#member-2").innerText=d2;
+      document.querySelector("#member-3").innerText=d3;
+         // if(d1>d2 && d1>d3){
+         //    m1=document.querySelector("#member-1")
+         //    m1.innerText=d1;
+         //       m1.style.color="green";
+         //     s= document.querySelector("#winner").innerText=d1;
+         // }else if(d1>d2 && d1<d3){
+         //    m1=document.querySelector("#member-1")
+         //    m1.innerText=d1;
+         //       m1.style.color="yellow";
+         // }else if(d1<d2 && d1<d3){
+         //    m1=document.querySelector("#member-1")
+         //    m1.innerText=d1;
+         //       m1.style.color="red"; 
+         // } else if(d2>d1 && d2>d3){
+         //    m1=document.querySelector("#member-2")
+         //    m1.innerText=d2;
+         //       m1.style.color="green";
+         //     s= document.querySelector("#winner").innerText=d2;
+         // }else if(d2>d1 && d2<d3){
+         //    m1=document.querySelector("#member-2")
+         //    m1.innerText=d2;
+         //       m1.style.color="yellow";
+         // }else if(d2<d1 && d2<d3){
+         //    m1=document.querySelector("#member-2")
+         //    m1.innerText=d2;
+         //       m1.style.color="red"; 
+         // } else if(d3>d1 && d3>d2){
+         //    m1=document.querySelector("#member-3")
+         //    m1.innerText=d3;
+         //       m1.style.color="green";
+         //     s= document.querySelector("#winner").innerText=d3;
+         // }else if(d3>d1 && d3<d2){
+         //    m1=document.querySelector("#member-3")
+         //    m1.innerText=d3;
+         //       m1.style.color="yellow";
+         // }else if(d3<d1 && d3<d2){
+         //    m1=document.querySelector("#member-3")
+         //    m1.innerText=d3;
+         //       m1.style.color="red"; 
+         // }
+         
+         
+         // if(d1>d2 && d1>d3){
+         //    m1=document.querySelector("#member-1")
+         //    m1.innerText=d1;
+         //       m1.style.color="green";
+         //     s= document.querySelector("#winner").innerText=d1;
+         //     s.style.color="white";
+         //     s.style.backgroundColor="green";
+         //      m2=document.querySelector("#member-2");
+         //      m2.innerText=d2;
+         //  m3=document.querySelector("#member-3");
+         //  m3.innerText=d3;
+         //  }else if(d2>d1 && d2>d3){
+         //    m1=document.querySelector("#member-2")
+         //    m1.innerText=d2;
+         //       m1.style.color="green";
+         //     s= document.querySelector("#winner").innerText=d2;
+         //     s.style.color="white";
+         //     s.style.backgroundColor="green";
+         //       document.querySelector("#member-1").innerText=d1;
+         //  document.querySelector("#member-3").innerText=d3;
+         //  }else if(d3>d1 && d3>d2){
+         //    m1=document.querySelector("#member-3")
+         //    m1.innerText=d3;
+         //       m1.style.color="green";
+         //     s= document.querySelector("#winner").innerText=d3;
+         //     s.style.color="white";
+         //     s.style.backgroundColor="green";
+         //       document.querySelector("#member-2").innerText=d2;
+         //  document.querySelector("#member-1").innerText=d1;
+         //   }
+      //   else if(d1>d2 && d1<d3){
+        //     m1=document.querySelector("#member-1")
+        //     m1.innerText=d1;
+        //        m1.style.color="yellow";
+        //   }else if(d1<d2 && d1>d3){
+        //     m1=document.querySelector("#member-1")
+        //     m1.innerText=d1;
+        //        m1.style.color="yellow";    
+        //   }else if(d2>d1 && d2<d3){
+        //     m1=document.querySelector("#member-2")
+        //     m1.innerText=d2;
+        //        m1.style.color="yellow";
+        //   }else if(d2<d1 && d2>d3){
+        //     m1=document.querySelector("#member-2")
+        //     m1.innerText=d2;
+        //        m1.style.color="yellow";    
+        //   }else if(d3>d1 && d3<d2){
+        //     m1=document.querySelector("#member-3")
+        //     m1.innerText=d3;
+        //        m1.style.color="yellow";
+        //   }else if(d3<d1 && d3>d2){
+        //     m1=document.querySelector("#member-3")
+        //     m1.innerText=d3;
+        //        m1.style.color="yellow";
+        // }else if(d1<d2 && d1<d3){
+        //     m1=document.querySelector("#member-1")
+        //     m1.innerText=d1;
+        //        m1.style.color="red";    
+        //   }else if(d2<d1 && d2<d3){
+        //     m1=document.querySelector("#member-2")
+        //     m1.innerText=d2;
+        //        m1.style.color="red";
+        //   }else if(d3<d1 && d3<d2){
+        //     m1=document.querySelector("#member-3")
+        //     m1.innerText=d3;
+        //        m1.style.color="red";    
+        //   }
+         
+        //  document.querySelector("#member-2").innerText=d2;
+        //  document.querySelector("#member-3").innerText=d3;
+
+
+     }
+</script>
